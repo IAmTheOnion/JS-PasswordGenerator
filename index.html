@@ -16,18 +16,25 @@
     <script src="script.js"></script>
 
     <div id="container">
-        <input type="text" placeholder="Your password"></input> <br>
+        <input type="text" placeholder="Your password" id="password"></input> <br>
+
         <input type="range" id="slider" min="8" max="24" value="12"/>
-        <label class="control control-checkbox">
-            Special characters
-                <input type="checkbox" checked="checked" />
-            <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-            REALLY special characters
-                <input type="checkbox" />
-            <div class="control_indicator"></div>
-        </label>
+
+        <div id="checkboxes">
+
+            <label class="control control-checkbox">
+                Special characters
+                <input type="checkbox" id="sc"/>
+                <div class="control_indicator"></div>
+            </label>
+
+            <label class="control control-checkbox">
+                Capital letters
+                <input type="checkbox" id="cl"/>
+                <div class="control_indicator"></div>
+            </label>
+
+        </div>
     </div>
 </body>
 
