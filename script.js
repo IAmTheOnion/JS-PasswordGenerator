@@ -1,23 +1,24 @@
 $( document ).ready(function() {
-    $(document).on('input', '#slider', function() {
-        document.getElementById("password").value = randomPassword(this.value, document.getElementById("cl").value, document.getElementById("sc").value);
+    $("#mb").click(function(){
+        document.getElementById("password").value = randomPassword(document.getElementById("slider").value, document.getElementById("cl").checked, document.getElementById("sc").checked);
     });
 
+    $("#slider").change(function() {
+        $("#slider-value").text(this.value);
+    })
 
 });
-
-console.log("test");
 
 function randomPassword(l, cl, sc) {
 
     let code = "abcdefghijklmnopqrstuvwxyz1234567890";
     let final = "";
 
-    if (cl == "on") {
+    if (cl) {
         code += "ABCDEFGHJIKLMNOPQRSTUVWXYZ";
     }
 
-    if (sc == "on") {
+    if (sc) {
         code += "!@#$%:&+=";
     }
 
